@@ -13,5 +13,6 @@ public class Conditionals {
             sal += 500;
         }
         System.out.println("Your salary after increment: " + sal);
+        input.close();
     }
 }
