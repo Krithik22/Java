@@ -31,5 +31,6 @@ public class Calculator {
             }
             System.out.println(ans);
         }
+        in.close();
     }
 }
