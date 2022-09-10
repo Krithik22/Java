@@ -11,10 +11,10 @@ public class Fibonacci{
             int temp = b;
             b = b+a;
             a =  temp;
-            System.out.println(b);
+            // System.out.println(b);
             cnt++;
         }
-        // System.out.println("The Nth Fibonacci term is " + c);
+        System.out.println("The "+n+"th Fibonacci term is " + b);
         in.close();
     }
 }
