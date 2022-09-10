@@ -6,15 +6,15 @@ public class Fibonacci{
         System.out.print("Enter the Nth term:");
         int n = in.nextInt();
         int a = 0,b = 1;
-        int c = 0;
-        for(int i=2;i<=n;i++){
-            c = a+b;
-            if(i!=n){
-                a = b;
-                b = c;
-            }
+        int cnt = 2;
+        while(cnt<=n){
+            int temp = b;
+            b = b+a;
+            a =  temp;
+            System.out.println(b);
+            cnt++;
         }
-        System.out.println("The Nth Fibonacci term is " + c);
+        // System.out.println("The Nth Fibonacci term is " + c);
         in.close();
     }
 }
