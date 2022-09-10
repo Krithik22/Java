@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
+        int ans = 0;
         Scanner in = new Scanner(System.in);
         while(true){
-            int ans = 0;
             System.out.print("Enter the operator: ");
             char op = in.next().trim().charAt(0);
             if(op=='+'|| op=='-'||op=='*'||op=='/'||op=='%'){
