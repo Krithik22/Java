@@ -14,12 +14,17 @@ public class Prep6UniqColor {
             for (int j = i+1; j < shirts.length; j++) {
                 if(shirts[i] == shirts[j]){
                     flag = 1;
-                    break;
+                    continue;
                 }
             }
             if(flag == 0){
                 uniqueNoOfShirts++;
             }
+            //     continue;
+            // } else{
+            //     uniqueNoOfShirts++;
+            // }
+            // System.out.println("hello");
         }
         System.out.println(uniqueNoOfShirts);
     }
