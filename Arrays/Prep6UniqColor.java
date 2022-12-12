@@ -9,22 +9,23 @@ public class Prep6UniqColor {
             shirts[i] = in.nextInt();
         }
         int uniqueNoOfShirts = 0;
+        // int cnt = 0;
         for (int i = 0; i < shirts.length; i++) {
             int flag = 0;
-            for (int j = i+1; j < shirts.length; j++) {
+            for (int j = 0; j < shirts.length; j++) {
+                if(i == j){
+                  continue;
+                }
+                // System.out.println("not breaking from inner loop" + i + " " + j);
                 if(shirts[i] == shirts[j]){
                     flag = 1;
-                    continue;
+                    // cnt++;
+                    break;
                 }
             }
             if(flag == 0){
                 uniqueNoOfShirts++;
             }
-            //     continue;
-            // } else{
-            //     uniqueNoOfShirts++;
-            // }
-            // System.out.println("hello");
         }
         System.out.println(uniqueNoOfShirts);
     }
