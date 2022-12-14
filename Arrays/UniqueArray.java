@@ -1,14 +1,30 @@
+// Reffered the solutions.
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class UniqueArray {
     public static void main(String[] args) {
-        int length = 5;
-        int[] arr = new int[length];
         Scanner in = new Scanner(System.in);
-        for (int i = 0; i < arr.length; i++) {
+        int length = in.nextInt();
+        int[] arr = new int[length];
+        int[] visited = new int[length];
+        for (int i = 0; i < length; i++) {
             arr[i] = in.nextInt();
+            visited[i] = 0;
         }
-        System.out.println(Arrays.toString(arr));
+        int maxCnt = 0;
+        for (int i = 0; i < length; i++) {
+            int cnt = 0;
+            int current = arr[i];
+            while(visited[current] == 0){
+                visited[current] = 1;
+                cnt++;
+                current = arr[current];
+            }
+            if(cnt > maxCnt){
+                maxCnt = cnt;
+            }
+        }
+        System.out.println(maxCnt);
     }
 }
