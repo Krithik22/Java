@@ -1,21 +1,21 @@
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.Scanner;
 
-// Concatenation of Array
-public class Q2 {
+// Build Array from permutation
+public class ArrayFromPermutation{
     public static void main(String[] args) {
         Scanner in = new Scanner(new InputStreamReader(System.in));
         int len = in.nextInt();
         int[] nums = new int[len];
-        int[] ans = new int[(nums.length * 2)];
+        int[] ans = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
             nums[i] = in.nextInt();
         }
         for (int i = 0; i < nums.length; i++) {
-            ans[i] = nums[i];
-            ans[i+len] = nums[i];
+            int val = nums[nums[i]];
+            ans[i] = val;
         }
-        System.out.println(Arrays.toString(ans));
+        // System.out.println(Arrays.toString(ans));
+        // In leetcode the input will be given by leetcode
     }
 }
