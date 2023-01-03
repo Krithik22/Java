@@ -2,6 +2,8 @@ public class BinarySearch {
     static int binarySearch(int[] arr, int target){
         int start = 0;
         int end = arr.length;
+        // return the index
+        // return -1 if it does not exist
         while (start <= end) {
             int mid = start + (end - start)/2;
             if(target < arr[mid]){
@@ -20,3 +22,4 @@ public class BinarySearch {
         System.out.println("Element found at index: " + ans);
     }
 }
+// Time Complexity: Best case - O(1); Worst Case - O(log N)
