@@ -17,11 +17,28 @@ public class CreateTargetArray{
         }
         return result;
     }
+
+    static int[] soln2(int[] nums, int[] index){
+        int[] result = new int[nums.length];
+        int c = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(result[index[i]] == 0 && c == 0){
+                result[index[i]] = nums[i];
+                if(nums[i] == 0){
+                    c++;
+                }
+            } else{
+                for(int j = index.length-1; j > index[i]; j--){
+                    result[j] = result[j-1];
+                }
+                result[index[i]] = nums[i];
+            }
+        }
+        return result;
+    }
     public static void main(String[] args) {
         int[] nums = {0,1,2,3,4};
         int[] index = {0,1,2,2,1};
-        // int[] nums = {0,1,0};
-        // int[] index = {0,1,0};
         int[] ans = soln(nums, index);
         System.out.println(Arrays.toString(ans));
     }
