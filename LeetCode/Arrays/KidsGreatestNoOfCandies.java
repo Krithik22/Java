@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+// import java.util.ArrayList;
 
 public class KidsGreatestNoOfCandies{
     static boolean[] soln(int[] arr, int extraCandies){
@@ -27,8 +27,8 @@ public class KidsGreatestNoOfCandies{
     }
     
     // Leetcode typed different function
-    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-        List<Boolean> result = new ArrayList(candies.length);
+    public ArrayList<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+        ArrayList<Boolean> result = new ArrayList<>(candies.length);
         for (int i = 0; i < candies.length; i++) {
             int ithKidCandy = candies[i] + extraCandies;
             int flag = 0;
