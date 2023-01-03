@@ -1,7 +1,7 @@
 public class BinarySearch {
     static int binarySearch(int[] arr, int target){
         int start = 0;
-        int end = arr.length;
+        int end = arr.length - 1;
         // return the index
         // return -1 if it does not exist
         while (start <= end) {
