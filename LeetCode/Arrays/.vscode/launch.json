@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayFromPermutation",
+            "request": "launch",
+            "mainClass": "ArrayFromPermutation",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConcatenationOfArray",
+            "request": "launch",
+            "mainClass": "ConcatenationOfArray",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateTargetArray",
+            "request": "launch",
+            "mainClass": "CreateTargetArray",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch KidsGreatestNoOfCandies",
+            "request": "launch",
+            "mainClass": "KidsGreatestNoOfCandies",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch NoOfGoodPairs",
+            "request": "launch",
+            "mainClass": "NoOfGoodPairs",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch NoofNoSmallerThanCurrNumber",
+            "request": "launch",
+            "mainClass": "NoofNoSmallerThanCurrNumber",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch Panagram",
+            "request": "launch",
+            "mainClass": "Panagram",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch RichestCustomerWealth",
+            "request": "launch",
+            "mainClass": "RichestCustomerWealth",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch RunningSumOf1DArray",
+            "request": "launch",
+            "mainClass": "RunningSumOf1DArray",
+            "projectName": "Arrays_425ca37"
+        },
+        {
+            "type": "java",
+            "name": "Launch ShuffleTheArray",
+            "request": "launch",
+            "mainClass": "ShuffleTheArray",
+            "projectName": "Arrays_425ca37"
+        }
+    ]
+}
