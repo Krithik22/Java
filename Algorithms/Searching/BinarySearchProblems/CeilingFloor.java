@@ -3,8 +3,9 @@ public class CeilingFloor {
     static int ceiling(int[] arr, int target){
         int start = 0, end = arr.length -1, ans;
         while(start <= end){
-            int mid = start + (end - start)/2;
+            int mid = start + (end - start)/2;//find the middle element
             if(arr[mid] == target){
+                // if mid element = target return it
                 ans = arr[mid];
                 return ans;
             } else if(arr[mid] < target){
@@ -13,6 +14,7 @@ public class CeilingFloor {
                 end = mid - 1;
             }
         }
+        // if the element is not found return the start
         ans = arr[start];
         return ans;
     }
@@ -29,6 +31,7 @@ public class CeilingFloor {
                 end = mid - 1;
             }
         }
+        // if the element is not found return the end
         ans = arr[end];
         return ans;
     }
