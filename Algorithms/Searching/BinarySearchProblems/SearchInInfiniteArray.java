@@ -1,6 +1,6 @@
 public class SearchInInfiniteArray{
     static int binarySearch(int[] nums, int target, int start, int end){
-        int ans = -1;
+        
         // in this problem we dont know the length of the array so we have to input the start and end
         // We are finding the range in solution function
         while (start <= end) {
@@ -13,7 +13,7 @@ public class SearchInInfiniteArray{
                 return mid;
             }
         }
-        return ans;
+        return -1;
     }
 
     static int solution(int nums[], int target){
