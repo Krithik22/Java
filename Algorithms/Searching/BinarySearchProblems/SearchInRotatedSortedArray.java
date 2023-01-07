@@ -3,10 +3,13 @@ public class SearchInRotatedSortedArray{
         int start = 0;
         int end = arr.length - 1;
         while(start <= end){
+            // finding the mid
             int mid = start + (end - start)/2;
+            // end > mid is a condition because if mid is at last index, then mid+1 will be outOfBound
             if(end > mid && arr[mid] > arr[mid + 1]){
                 return mid;
             }
+            // similarly if mid is at start = 0 mid-1 cannot be there
             if(start < mid && arr[mid] < arr[mid - 1]){
                 return mid - 1;
             }
