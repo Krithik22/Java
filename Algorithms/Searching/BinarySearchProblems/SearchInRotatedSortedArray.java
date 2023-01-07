@@ -42,6 +42,26 @@ public class SearchInRotatedSortedArray{
         }
         return ans;
     }
+    static int kunalSearchSoln(int[] nums, int target){
+        int pivot = findPivot(nums);
+        // if pivot not found then it is a normal sorted array, it is not a rotated array. So just perform binarySearch
+        if (pivot == -1) {
+            return binarySearch(nums, target, 0, nums.length);
+        }
+
+        // if the pivot element = target then return it
+        if(nums[pivot] == target){
+            return pivot;
+        }
+
+        // If the target element > start element then obiviously in an rotated array it is enough to search till the pivot
+        // because after the pivot element everything will be small 
+        if (target >= nums[0]) {
+            return binarySearch(nums, target, 0, pivot);
+        }
+        
+        return binarySearch(nums, target, pivot + 1, nums.length);
+    }
     public static void main(String[] args) {
         int[] nums = {4,5,6,7,0,1,2};
         int target = 1;
