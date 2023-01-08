@@ -34,6 +34,48 @@ public class SearchInRotatedSortedArray{
         }
         return -1;
     }
+
+
+    static int findPivotWithDuplicates(int[] arr){
+        int start = 0;
+        int end = arr.length - 1;
+        while(start <= end){
+            // finding the mid
+            int mid = start + (end - start)/2;
+            // end > mid is a condition because if mid is at last index, then mid+1 will be outOfBound
+            if(end > mid && arr[mid] > arr[mid + 1]){
+                return mid;
+            }
+            // similarly if mid is at start = 0 mid-1 cannot be there
+            if(start < mid && arr[mid] < arr[mid - 1]){
+                return mid - 1;
+            }
+            
+            // If the elements at start, middle and end are equal, then skip the duplicates
+            if (arr[mid] == arr[start] && arr[mid] == arr[end]) {
+                // skip the duplicates
+                // check if the elements at the start and end are pivot
+                // check if start is pivot
+                if (arr[start] > arr[start+1]) {
+                    return start;
+                }
+                start++;
+                // check if end is pivot
+                if (arr[end] < arr[end-1]) {
+                    return end - 1;
+                }
+                end--;
+            } 
+            // left side is sorted so pivot should be in right side
+            else if(arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[mid] > arr[end])){
+                start = mid + 1;
+            } else{
+                end = mid - 1;
+            }
+        }
+        return -1;
+    }
+
     static int search(int[] nums, int target) {
         int pivot = findPivot(nums);
         int ans = binarySearch(nums,target,0,pivot);
