@@ -12,18 +12,30 @@ public class CyclicSort {
         int i = 0;
         int n = arr.length;
         while(i < n){
-            if(i == arr[i] - 1){
+            int correctInd = arr[i] - 1;
+            if(i == correctInd){
                 i++;
             } else{
-                int ind = arr[i] - 1;
-                swap(arr, i, ind);
+                swap(arr, i, correctInd);
+            }
+        }
+    }
+
+    static void kunalCyclic(int[] arr){
+        int i = 0;
+        while(i < arr.length){
+            int correctIndex = arr[i] - 1;
+            if(arr[i] != arr[correctIndex]){
+                swap(arr, i, correctIndex);
+            } else{
+                i++;
             }
         }
     }
 
     public static void main(String[] args) {
         int[] nums = {4,5,2,1,3};
-        cyclic(nums);
+        kunalCyclic(nums);
         System.out.println(Arrays.toString(nums));
     }
 }
