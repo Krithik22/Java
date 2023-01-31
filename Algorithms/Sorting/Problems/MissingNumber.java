@@ -28,4 +28,22 @@ public class MissingNumber {
             }
             return ans;
         }
+
+        public static int missingNumber2(int[] nums){
+            int i = 0;
+        int n = nums.length;
+        while(i < n){
+            if(nums[i] < n && nums[i] != i){
+                swap(nums, i, nums[i]);
+            } else{
+                i++;
+            }
+        }
+        for(int ind = 0; ind < n; ind++){
+            if(ind != nums[ind]){
+                return ind;
+            }
+        }
+        return n;
+        }
 }
