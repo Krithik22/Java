@@ -10,8 +10,10 @@ public class NumberRecursion {
             System.out.println(n);
             return;
         }
+        // body of the function
         System.out.println(n);
         // each time a function is called, it takes a separate place in the memory
+        // recursive call
         print(n + 1);
     }
 }
