@@ -7,7 +7,7 @@ public class LenghtOfString {
     }
 
     public static void main(String[] args) {
-        int ans = len("abcd", 0);
+        int ans = len("geeksforgeeks", 0);
         System.out.println(ans);
     }
 }
