@@ -1,7 +1,8 @@
 public class HappyNumber {
     public static void main(String[] args) {
-        boolean ans = isHappy(2);
-        System.out.println(ans);
+        // boolean ans = isHappy(2);
+        char c = 1 + 64;
+        System.out.println(c);
     }
 
     static boolean isHappy(int n) {
