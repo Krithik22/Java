@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class Sorting {
     public static void main(String[] args) {
-        int[] arr = { 4, 3, 2, 1 };
-        bubbleRecursion(arr, arr.length - 1, 0);
+        int[] arr = { 6, 3, 8, 5, 2, 9, 1, 0 };
+        selectionRecursion(arr, arr.length - 1, 0);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -13,14 +13,25 @@ public class Sorting {
         arr[b] = temp;
     }
 
-    static int max(int[] arr, int e) {
+    static int getMax(int[] arr, int e) {
         int max = 0;
+        int ind = 0;
         for (int i = 0; i <= e; i++) {
             if (arr[i] > max) {
                 max = arr[i];
+                ind = i;
             }
         }
-        return max;
+        return ind;
+    }
+
+    static void selectionRecursion(int[] arr, int r, int c) {
+        if (r == 0) {
+            return;
+        }
+        int max = getMax(arr, r);
+        swap(arr, r, max);
+        selectionRecursion(arr, r - 1, 0);
     }
 
     static void bubbleRecursion(int[] arr, int r, int c) {
