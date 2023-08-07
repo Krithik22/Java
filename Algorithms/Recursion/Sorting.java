@@ -5,7 +5,8 @@ public class Sorting {
         int[] arr = { 6, 3, 8, 5, 2, 9, 1, 0 };
         // int[] arr = { 4, 3, 2, 1 };
         // selectionRecursion(arr, arr.length - 1, 0);
-        selection(arr, arr.length, 0, 0);
+        // selection(arr, arr.length, 0, 0);
+        quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -70,5 +71,35 @@ public class Sorting {
             arr[r - 1] = temp;
             selection(arr, r - 1, 0, 0);
         }
+    }
+
+    static void quickSort(int[] nums, int low, int high) {
+        if (low >= high) {
+            return;
+        }
+
+        int s = low;
+        int e = high;
+        int m = low + (high - low) / 2;
+        int pivot = nums[m];
+
+        while (s <= e) {
+            while (nums[s] < pivot) {
+                s++;
+            }
+            while (nums[e] > pivot) {
+                e--;
+            }
+            if (s <= e) {
+                int temp = nums[s];
+                nums[s] = nums[e];
+                nums[e] = temp;
+                s++;
+                e--;
+            }
+
+        }
+        quickSort(nums, low, e);
+        quickSort(nums, e, high);
     }
 }
