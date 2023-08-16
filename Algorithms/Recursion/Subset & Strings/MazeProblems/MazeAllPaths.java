@@ -20,7 +20,10 @@ public class MazeAllPaths {
         if (!maze[r][c]) {
             return;
         }
+
+        // I'm considering this block in my path, so change it to true
         maze[r][c] = false;
+
         if (r < maze.length - 1) {
             allPath(path + 'D', maze, r + 1, c);
         }
@@ -33,6 +36,11 @@ public class MazeAllPaths {
         if (c > 0) {
             allPath(path + 'L', maze, r, c - 1);
         }
+
+        // Here the function comes out, so the changes that were made must be restored
+        // this line is where the function will be over
+        // so before the function gets removed, also remove the changes that were made
+        // by that function
         maze[r][c] = true;
     }
 
