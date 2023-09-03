@@ -2,9 +2,42 @@ public class NKnights {
     public static void main(String[] args) {
         int n = 4;
         boolean[][] board = new boolean[n][n];
-        knight(board, 0, 0, n);
+        knight(board);
     }
 
+    static void knight(boolean[][] board) {
+        for (int r = 0; r < board.length; r++) {
+            for (int c = 0; c < board.length; c++) {
+                if (isSafe(board, r, c)) {
+                    board[r][c] = true;
+                    knight(board);
+                    board[r][c] = false;
+                } else {
+                    return;
+                }
+            }
+        }
+    }
+
+    // N-Knights with just board and row as parameters
+    static void knight(boolean[][] board, int row) {
+        if (row == board.length) {
+            display(board);
+            System.out.println();
+            return;
+        }
+
+        for (int col = 0; col < board.length; col++) {
+            if (isSafe(board, row, col)) {
+                board[row][col] = true;
+                knight(board, row + 1);
+                board[row][col] = false;
+            }
+        }
+        return;
+    }
+
+    // N-Knights with board, row, col and remaining knights as parameter
     static void knight(boolean[][] board, int row, int col, int knights) {
         if (knights == 0) {
             display(board);
