@@ -1,2 +1,5 @@
-package Leetcode;public class RemoveDuplicates {
+package Leetcode;
+
+public class RemoveDuplicates {
+
 }
